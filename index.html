@@ -4,52 +4,162 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vaishal</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 10px 0 4px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 15px;
+      width: 100%;
+      max-width: 260px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .card span {
+      display: block;
+      color: #888;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .follow-btn {
+      margin-top: 6px;
+      padding: 6px 14px;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .info-box {
+      background-color: #e5edf0;
+      padding: 18px;
+      border-radius: 16px;
+      text-align: left;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    @media (max-width: 480px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      .info-box {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
-<body class="bg-white text-black font-sans p-6">
-  <div class="max-w-md mx-auto text-center space-y-6">
+<body>
+  <div class="container">
+    <img src="Profile.png" alt="Vishal Rathore" class="profile-pic"/>
+    <h1>Vishal Rathore</h1>
+    <p class="subtitle">21 year-old Guy 📍 M.P, India</p>
+    <p class="description">🧑🏻‍💻 Creating Wallpapers, Customization Apps, Providing digital services & more...</p>
+<br>
+    <br>
     
-    <!-- Profile Image -->
-    <img src="Profile.png">
+    <h2>Follow me to be a part of my journey!</h2>
 
-    <!-- Name and Location -->
-    <div>
-      <h1 class="text-2xl font-bold">Vishal Rathore</h1>
-      <p class="text-sm text-gray-700 mt-1">21 year-old Guy 📍 M.P, India</p>
-    </div>
-
-    <!-- Tagline -->
-    <p class="text-sm text-gray-800">🧑🏻‍💻 Creating Wallpapers, Customization<br/>Apps, Providing digital services & more…</p>
-
-    <!-- Follow Text -->
-    <p class="font-semibold text-base">Follow me to be a part of my journey!</p>
-
-    <!-- Social Cards -->
-    <div class="grid grid-cols-2 gap-4">
-      <!-- Goodreads -->
-      <div class="bg-white border rounded-xl p-4 shadow-sm text-left">
-        <div class="flex items-center space-x-2 mb-2">
-          <img src="https://www.goodreads.com/favicon.ico" alt="Goodreads" class="w-6 h-6">
-          <p class="text-sm font-medium">Reading tons of<br/>books currently.</p>
-        </div>
-        <p class="text-xs text-gray-500">goodreads.com</p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Goodreads_Logo_2020.svg" class="icon" alt="Goodreads">
+        <p><strong>Reading tons of books currently.</strong>
+          <span>goodreads.com</span>
+        </p>
       </div>
-
-      <!-- Instagram -->
-      <div class="bg-white border rounded-xl p-4 shadow-sm text-left">
-        <div class="flex items-center space-x-2 mb-2">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-6 h-6">
-          <p class="text-sm font-medium">Posting cat reels &<br/>life stories…</p>
-        </div>
-        <button class="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-md">Follow 707</button>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="icon" alt="Instagram">
+        <p><strong>Posting cat reels & life stories...</strong><br/>
+        <button class="follow-btn">Follow 707</button></p>
       </div>
     </div>
 
-    <!-- Bio Box -->
-    <div class="bg-gray-200 rounded-2xl p-4 text-sm text-left text-gray-900 leading-relaxed">
-      <p>
-        I <strong>design wallpapers</strong>, provide <strong>social media services</strong>, innovative <strong>ideas</strong>, <strong>Advisor</strong> with <strong>creative solutions</strong>, <strong>time saver scripts</strong>. <br/>previously <strong>icons designer</strong>.
-      </p>
+    <div class="info-box">
+      I <strong>design wallpapers</strong>, provide <strong>social media services</strong>, innovative <strong>ideas</strong>, 
+      <strong>Advisor</strong> with <strong>creative solutions</strong>, <strong>time saver scripts</strong>. 
+      previously <strong>icons designer</strong>.
     </div>
   </div>
 </body>
